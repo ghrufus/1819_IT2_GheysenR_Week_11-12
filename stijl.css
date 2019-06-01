@@ -1,0 +1,342 @@
+body {
+	width: 100vw;
+	height: 100vh;
+	background-color: ghostwhite;
+	font-size: 1rem;
+	font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+}
+
+header {
+	width: 100vw;
+	height: 5vh;
+	padding-top: 1vw;
+}
+
+nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+nav a {
+	margin-left: 1vw;
+	margin-right: 1vw;
+	text-decoration: none;
+	color: white;
+	font-family: 'Anton', sans-serif;
+}
+
+nav a:hover {
+	text-decoration:line-through;
+}
+
+main {
+	width: 100vw;
+	height: 89vh;
+	background-color: ghostwhite;
+}
+
+#button {
+	background-color: #364dc3;
+	filter: opacity(25%);
+	width: 8vw;
+	height: 3vh;
+	font-size: .7rem;
+	color: white;
+	text-align: center;
+	position: relative;
+	top: 4vh;
+	left: 2vw;
+	border-radius: 60%;
+	cursor: pointer;
+}
+
+.animatie {
+	width: 75vw;
+	height: 75vh;
+	background-image: linear-gradient(90deg, #be3fea, #ce083a);
+	margin: 0vw auto;
+	position: relative;
+	animation-name: achtergrond;
+	animation-delay: 1.5s;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+}
+
+@keyframes achtergrond {
+	20% {
+		background-image: linear-gradient(90deg, #201ff2, #04922b);
+	}
+	40% {
+		background-image: linear-gradient(90deg, #ae12dc, #c0520b);
+	}
+	60% {
+		background-image: linear-gradient(90deg,#dc1032, #94a6a4);
+	}
+	80% {
+		background-image: linear-gradient(90deg,#429e3e, #985abc);
+	}
+	100%{
+		background-image: linear-gradient(90deg, #be3fea, #ce083a);
+	}
+}
+
+.svg1 {
+	position: relative;
+	left: 7vw;
+	top: 2vh;
+	filter: opacity(0%);
+	animation-name: swish;
+	animation-delay: 1.5s;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+}
+
+.svg2 {
+	position:relative;
+	left: -2vw;
+	top: 3vh;
+	filter: opacity(10%);
+	animation-name: swash;
+	animation-delay: 1.5s;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+}
+
+@keyframes swish {
+	0% {
+		transform: translate(15vw,0);
+		filter: opacity(0%);
+	}
+	10% {
+		filter: opacity(10%)
+	}
+	15% {
+		filter: opacity(100%);
+	}
+	50% {
+		transform: translate(0,0);
+	}
+	99% {
+		filter: opacity(100%);
+	}
+}
+
+@keyframes swash {
+	0% {
+		transform: translate(0,0);
+		filter: opacity(0%);
+	}
+	10% {
+		filter: opacity(10%)
+	}
+	15% {
+		filter: opacity(100%);
+	}
+	50% {
+		transform: translate(15vw,0);
+	}
+	99% {
+		filter: opacity(100%);
+	}
+	100% {
+		transform: translate(15vw, 0);
+	}
+}
+
+
+footer {
+	width: 100vw;
+	height: 3.5vh;
+	background-color: ghostwhite;
+	align-content: center;
+}
+
+footer a {
+	position: relative;
+	margin-left: 1vw;
+	margin-right: 1vw;
+	text-decoration: none;
+	color: black;
+	font-family: 'Anton', sans-serif;
+}
+
+
+/* VANAF HIER KOMT SPECIFIEK VOOR "OVER MIJ" */
+.omhullend {
+	width: 75vw;
+	height: 75vh;
+	margin: 0vw auto;
+	position: relative;
+	padding: .75rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-gap: 1vh;
+}
+
+.omhullend div {
+	background-image: linear-gradient(90deg, #91c9fa, #91faa6);
+	width: 20vw;
+	height: 20vh;
+	padding: 1vh;
+}
+
+.omhullend div:nth-child(1) {
+	grid-column: 1;
+	grid-row: 1;
+}
+
+.omhullend div:nth-child(2) {
+	grid-column: 2;
+	grid-row: 2;
+}
+
+.omhullend div:nth-child(3) {
+	grid-column: 1/3;
+	grid-row: 3;
+	width: 45vw;
+}
+
+.omhullend div:nth-child(4) {
+	grid-column: 3;
+	grid-row: 1/4;
+	height: 72vh;
+	background-image: url(img/IT_overmij_1.jpg);
+	background-size: cover;
+	filter:grayscale(100);
+}
+
+.omhullend div:nth-child(4):hover {
+		filter: grayscale(0);
+}
+
+p {
+	font-size: .5rem;
+	filter: opacity(30%);
+	position: absolute;
+	right: 16.1vw;
+	bottom: 12vh;
+}
+
+
+
+
+/*VANAF HIER KOMT SPECIFIEK "HET WERK" */
+.container {
+	width: 70vw;
+	height: 77vh;
+	background-color: black;
+	margin: 0 auto;
+}
+
+h2 {
+	color: white;
+	font-size: 1.4rem;
+	font-weight: 600;
+	text-decoration: underline;
+	text-align: center;
+	padding: 1.2vh;
+}
+
+.slideshow {
+	background-image: linear-gradient(30deg, #efff73, #b02b62);
+	width: 60vw;
+	height: 65vh;
+	margin: 1.2vh auto;
+	position: relative;
+}
+
+.slideshow > div {
+	position: absolute;
+}
+
+img {
+	width: 60vw;
+	height: 65vh;
+	margin: 0 auto;
+	display: block;
+	position: absolute;
+}
+
+
+.fotogrid {
+	width: 70vw;
+	height: 20vh;
+	background-color: black;
+	margin: -1vh auto;
+	display: grid;
+	grid-gap: 2vw;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding: 1.2vh auto;
+}
+
+.fotogrid span {
+	width: 15vw;
+	height: 15vh;
+	margin: 1.5vh auto;
+}
+
+.fotogrid span:nth-child(1) {
+	background-image: url(img/IT_fotografie_6.png);
+	background-size: cover; background-position: center;
+}
+.fotogrid span:nth-child(2) {
+	background-image: url(img/IT_fotografie_7.png);
+	background-size: cover; background-position: center;
+}
+.fotogrid span:nth-child(3) {
+	background-image: url(img/IT_fotografie_8.png);
+	background-size: cover; background-position: center;
+}
+
+.drieD {
+	width: 70vw;
+	height: 80vh;
+	margin: 5vh auto 1vh;
+	background-color: black;
+	display: grid;
+	grid-gap: 3vh;
+	grid-template-columns: 1fr 1fr;
+}
+
+.drieD h2 {
+	grid-column: 1/3;
+	margin-bottom: -10vh;
+}
+
+.drieD span {margin:  auto;}
+
+.drieD span:nth-child(3) {
+	width: 30vw;
+	height: 60vh;
+	background-image: url(img/IT_graphic_1.jpg);
+	background-size: cover; background-position: center;
+	grid-column: 1;
+	grid-row: 2;
+}
+
+.drieD span:nth-child(2) {
+	width: 30vw;
+	height: 60vh;
+	background-image: url(img/IT_graphic_3.jpg);
+	background-size: cover; background-position: center;
+	grid-column: 2;
+	grid-row: 2;
+}
+
+
+
+@supports (grid-area: auto) {
+	/* we weten hier: ondersteuning voor grid-layout */
+
+	@media (min-width: 80rem) {
+		/* een voorbeeld van een media query: hier schrijf je de css die wordt uitgevoerd indien het scherm minstens 800px breedte biedt */
+
+	}
+
+}
